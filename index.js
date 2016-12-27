@@ -121,13 +121,5 @@ module.exports = function(errorLangMap = defaultErrorLangMap){
 			}
 
 		}
-
-
-		static convert(error){
-			if(error instanceof this)
-				return this;
-			else
-				return this.from(error);
-		}
 	}
 };
