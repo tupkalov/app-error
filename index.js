@@ -9,7 +9,8 @@ const parseFromString = message => {
 }
 
 module.exports = function(errorLangMap = defaultErrorLangMap){
-	return class AppError extends Error {
+
+	class AppError extends Error {
 
 		constructor(first, second, third) {
 			var wrappedFrom, wrappedMessage;
@@ -80,9 +81,6 @@ module.exports = function(errorLangMap = defaultErrorLangMap){
 			else
 				this.stack = (new Error(message)).stack; 
 		}
-		get ns (){
-			return 'App'
-		}
 
 		toJSON (){
 			return this.message;
@@ -122,4 +120,6 @@ module.exports = function(errorLangMap = defaultErrorLangMap){
 
 		}
 	}
+
+	return AppError.extend('App');
 };
