@@ -67,7 +67,6 @@ class AppError extends Error {
 		}
 
 		this.from 		= from;
-		this.info 		= info;
 
 
 		if (typeof Error.captureStackTrace === 'function')
