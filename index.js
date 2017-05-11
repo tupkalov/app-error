@@ -1,3 +1,5 @@
+"use strict";
+
 const InternalError = 'InternalError';
 
 const parseFromString = message => {
