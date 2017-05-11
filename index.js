@@ -1,7 +1,7 @@
 const InternalError = 'InternalError';
 
 const parseFromString = message => {
-	let indexSeparator = message.indexOf('::', 2);
+	var indexSeparator = message.indexOf('::', 2);
 	return [message.substring(2, indexSeparator), message.substring(indexSeparator+2)]
 }
 
